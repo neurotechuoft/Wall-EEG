@@ -1,0 +1,21 @@
+1. Install Conda from here: http://conda.pydata.org/miniconda.html
+2. Open up your shell (Windows: Search 'Powershell' in your search bar, right-click, and Click 'Run as Administrator')
+3. You can install Conda packages by typing 'conda install PACKAGE'. Install the following packages:
+	numpy
+	matplotlib
+	scikit-learn
+	pyZMQ
+4. Some packages are available as GENERAL PYTHON PACKAGES, and aren't available in Conda to install directly. To install these, we first need to create a RECIPE! :D
+	a) We first need a RECIPE MAKER. Install this package to get the recipe maker: "conda-build"   (ie: conda install conda-build')
+	b) To make a recipe, we type 'conda skeleton pypi PACKAGE'
+	c) We then need to build our package. Type in 'conda build PACKAGE'
+	c) Then we can install our package! To install PACKAGE, we type 'conda install --use-local  PACKAGE'
+	
+	Do this to install python-osc.
+
+What do these packages do?
+	- numpy is used to deal with vectors and matrices and process them.
+	- matplotlib lets you plot stuff :D
+	- scikit-learn is a MACHINE LEARNING library. It will be the brains behind today's hack.
+	- pyZMQ is 
+	- python-osc lets you communicate with the Muse EEG device. OSC is a data format that many devices, including the Muse EEG uses. This package will let us get data from the Muse to process.
