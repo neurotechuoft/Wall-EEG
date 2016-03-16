@@ -17,3 +17,4 @@ TLDR; maybe try listening to different types of music (that elicits different st
 http://ijesc.org/upload/99060eba56e9c8f038a94da4d3456d1d.Mind%20Bot_An%20EEG%20Based%20Mind%20Controlled%20Mobile%20Robot.pdf
 
 This article details the process of making a mind-controlled bot quite well. It was made to move patients with paralysis, with additional safety features in emergency situations. It talks about both the hardware and the software techniques needed to make such a bot.
+--Sayan
