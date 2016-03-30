@@ -18,3 +18,10 @@ http://ijesc.org/upload/99060eba56e9c8f038a94da4d3456d1d.Mind%20Bot_An%20EEG%20B
 
 This article details the process of making a mind-controlled bot quite well. It was made to move patients with paralysis, with additional safety features in emergency situations. It talks about both the hardware and the software techniques needed to make such a bot.
 --Sayan
+
+
+"Good performance is related to two types of EEG phenomena (i) a tonic increase in alpha but a decrease in theta power, and (ii) a large phasic (event-related) decrease in alpha but increase in theta, depending on the type of memory demands”
+
+https://www.ncbi.nlm.nih.gov/pubmed/10209231
+
+--Alex
