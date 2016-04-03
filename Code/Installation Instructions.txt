@@ -11,11 +11,12 @@
 	c) We then need to build our package. Type in 'conda build PACKAGE'
 	c) Then we can install our package! To install PACKAGE, we type 'conda install --use-local  PACKAGE'
 	
-	Do this to install python-osc.
+	IF YOU HAVE WINDOWS: Do this to install python-osc.
+	IF YOU HAVE LINUX: Do this to install pyliblo
 
 What do these packages do?
 	- numpy is used to deal with vectors and matrices and process them.
 	- matplotlib lets you plot stuff :D
 	- scikit-learn is a MACHINE LEARNING library. It will be the brains behind today's hack.
 	- pyZMQ is 
-	- python-osc lets you communicate with the Muse EEG device. OSC is a data format that many devices, including the Muse EEG uses. This package will let us get data from the Muse to process.
+	- python-osc/pyliblo lets you communicate with the Muse EEG device. OSC is a data format that many devices, including the Muse EEG uses. This package will let us get data from the Muse to process.
