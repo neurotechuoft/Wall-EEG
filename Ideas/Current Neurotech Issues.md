@@ -2,7 +2,7 @@
 Found a problem that you think can be solved using neurotechnology? Not sure how to tackle it? Add it in here!
 (follow the format below)
 
-
+#Format
 ##Issue: (Example)
 (Brief description)
 ###Feasibility: #/10
