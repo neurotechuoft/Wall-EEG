@@ -6,13 +6,12 @@ class PluginSaveToArray(plugintypes.IPluginExtended):
 	def activate(self):
 		print "Print activated"
 		self.array = []
-		self.sample_count = 0
 	
 	# Called with each new sample
 	def __call__(self, sample):
 	    
 		if sample:
-		
+		    
 			#FORMAT OF INCOMING DATA: ID: %f\n%s\n%s" %(sample.id, str(sample.channel_data)[1:-1], str(sample.aux_data)[1:-1])
 			
 			key_values_row = []
@@ -26,5 +25,12 @@ class PluginSaveToArray(plugintypes.IPluginExtended):
 			
 			# Append row to self.array
 			self.array.append(key_values_row)
+			
+			if len(self.array) == 512:
+			    print self.array
+			    print "Yahhaaayyyyy"
+			    
+			    self.array = []
+			    
 			
 
