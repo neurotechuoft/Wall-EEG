@@ -14,6 +14,8 @@ class PluginPrint(plugintypes.IPluginExtended):
 		self.start_time = timeit.default_timer()
 		self.delim = delim
 		self.verbose = verbose
+		self.fig = plt.figure()
+		
 
 	def activate(self):
 		if len(self.args) > 0:
@@ -26,6 +28,10 @@ class PluginPrint(plugintypes.IPluginExtended):
 
 		self.file_name = self.file_name + '.csv'
 		print "Will export CSV to:", self.file_name
+		
+		# Preparing graph
+	    ax1 = self.fig.add_subplot(1,1,1)
+		
 		#Open in append mode
 		with open(self.file_name, 'a') as f:
 			f.write('%'+self.time_stamp + '\n')
@@ -38,7 +44,11 @@ class PluginPrint(plugintypes.IPluginExtended):
 		print "Optional argument: [filename] (default: collect.csv)"
 
 	def __call__(self, sample):
-	t = timeit.default_timer() - self.start_time
+	    '''
+	    For given instance, obtain data from OpenBCI and a) save to .CSV, and 
+	    b) update the graph.
+	    '''
+	    t = timeit.default_timer() - self.start_time
 
 		#print timeSinceStart|Sample Id
 		if self.verbose:
@@ -59,10 +69,10 @@ class PluginPrint(plugintypes.IPluginExtended):
 		row += '\n'
 		with open(self.file_name, 'a') as f:
 			f.write(row)
+		
+		ani = animation.FuncAnimation(self.fig, animate, interval=1000)
+	    plt.show()
     
-    
-	#fig = plt.figure()
-	#ax1 = fig.add_subplot(1,1,1)
 
 	def animate(i):
 	    '''
@@ -79,5 +89,4 @@ class PluginPrint(plugintypes.IPluginExtended):
 		    yar.append(int(y))
 	    ax1.clear()
 	    ax1.plot(xar,yar)
-	#ani = animation.FuncAnimation(fig, animate, interval=1000)
-	#plt.show()
+	
