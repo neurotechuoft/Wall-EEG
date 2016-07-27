@@ -5,6 +5,7 @@ The original OpenBCI code uses a system of Yapsy plugins you can make to do what
 ### Plugins
 The plugins are stored in the 'plugins' folder. Each plugin has two components: a Python script (.py), and a Yapsy definition file(.yapsy-plugin). The definition file allows the Yapsy system to identify which programs are plugins and which aren't. This is what the Yapsy file looks like:
 
+```
 [Core]
 Name = (name)
 Module = (file name)
@@ -13,6 +14,7 @@ Module = (file name)
 Author = (authors go here)
 Version = #.#
 Description = (description)
+```
 
 ## Code Structure
 Code: Contains our code for the mind-controlled bot.
