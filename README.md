@@ -18,8 +18,12 @@ Description = (description)
 
 ## Code Structure
 Code: Contains our code for the mind-controlled bot.
+
 --OpenBCIPy: Code base for the bot
+
 ----user.py: Main script; syncs with OpenBCI and runs plugins that can do whatever you want them to do.
+
 ----machine-learning: Contains supervised machine learning classifier and a bunch of other code for a workshop done by BCIMontreal
+
 ----plugins: Contains plugins the main function can use. We want to use 'packets-to-csv' for data collection
 
