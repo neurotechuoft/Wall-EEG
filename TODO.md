@@ -6,7 +6,9 @@ Create tests for each individual component (signal acquisition, machine learning
 
 Organize GitHub --Sayan
 
-Look at current machine learning code and make sure it works -- Zahra
+Look at current machine learning code and make sure it works -- Sayan
+
+Develop classifier for 4 states -- Zahra
 
 Benchmark machine learning alg to see if it can run 140kb of data fast enough --Taylor
 
