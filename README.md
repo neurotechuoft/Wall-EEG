@@ -16,6 +16,10 @@ Version = #.#
 Description = (description)
 ```
 
+### Data Sets
+http://www.bbci.de/competition/iv/desc_1.html
+This dataset contains motor imagery comparisons btn moving left hand, right hand, and foot.
+
 ## Code Structure
 Code: Contains our code for the mind-controlled bot.
 
