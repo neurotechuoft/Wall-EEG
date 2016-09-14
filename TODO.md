@@ -1,10 +1,8 @@
 #Tasks:
 
-Create Slack - Sayan
+Figure out noise issues with OpenBCI Board --Sayan
 
 Create tests for each individual component (signal acquisition, machine learning, etc) --Sayan
-
-Organize GitHub --Sayan
 
 Look at current machine learning code and make sure it works -- Sayan
 
