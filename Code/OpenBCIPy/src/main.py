@@ -295,7 +295,7 @@ if __name__ == '__main__':
     import kivy_app
     from kivy.clock import Clock
 
-    app = kivy_app.InSenseApp()
+    app = kivy_app.WallEEGApp()
 
 
     def run(instance):

@@ -19,16 +19,16 @@ from graph import Graph, MeshLinePlot
 # grid_layout = GridLayout()
 
 
-class InSenseApp(App):
+class WallEEGApp(App):
     def __init__(self):
-        super(InSenseApp, self).__init__()
-        self.user = User('', '', '')
+        super(WallEEGApp, self).__init__()
+        self.user = User()
         self.graph = Graph(xlabel='X', ylabel='Y', x_ticks_minor=5,
                            x_ticks_major=25, y_ticks_major=0.001,
                            y_grid_label=True, x_grid_label=True, padding=5,
                            x_grid=True, y_grid=True, xmin=-0, xmax=100,
-                           ymin=-0.007,
-                           ymax=0.007)
+                           ymin=-0.1,
+                           ymax=0.1)
         self.plot = MeshLinePlot(color=[1, 0, 0, 1])
         self.counter = 0
 
@@ -81,7 +81,7 @@ class Gui(FloatLayout):
 
 
 if __name__ == '__main__':
-    app = InSenseApp()
+    app = WallEEGApp()
 
 
     def run():

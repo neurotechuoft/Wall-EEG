@@ -80,7 +80,7 @@ class ECG(BioSignal):
                                                    ftype='FIR',
                                                    band='bandpass',
                                                    order=order,
-                                                   frequency=[3, 45],
+                                                   frequency=[1, 58],
                                                    sampling_rate=self.sample_rate)
 
             # MIGHT NEED TO CONVERT filtered_data INTO A LIST!!!
