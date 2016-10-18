@@ -26,7 +26,7 @@ For example, Sayan would do:
 git checkout -b sayan_recommendations
 ```
 
-f) edit the TODO file with the changes that need to be made. Commit to your branch as you do so
+f) edit the TODO file with the changes that need to be made. Commit to your branch as you do so. (you can just focus on the files that are described on the README.md)
 
 g) When you are done, push YOUR BRANCH to a remote of your branch:
 ```
