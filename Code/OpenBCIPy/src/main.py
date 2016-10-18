@@ -308,6 +308,7 @@ if __name__ == '__main__':
     # except:
     #     raise
 
+    # EXECUTE PLUGINS, STREAM FROM OPENBCI
     openbci_update_thread = threading.Thread \
         (target=execute_plugins, args=(board, [app.user.userECG]))
     try:
@@ -316,6 +317,3 @@ if __name__ == '__main__':
         raise
 
     run(0)
-
-    # EXECUTE PLUGINS, STREAM FROM OPENBCI
-    # execute_plugins(board, [user.userECG])
