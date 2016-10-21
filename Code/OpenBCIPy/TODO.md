@@ -38,7 +38,8 @@ Congrats, you're done :D
 
 # Files that need to be removed from GitHub repo
 Add file paths of the files that need to be deleted here:
-./Code/OpenBCIPy/src
+
+(Let $ = ./Code/OpenBCIPy/src)
 
 # Redunant code
 Make note of redunant code here
