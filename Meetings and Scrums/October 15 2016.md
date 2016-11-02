@@ -3,6 +3,7 @@
 ## Attendees:
 * Mikes
 * Afifa
+* Sayan
 
 ### Time: 12:30--1:30pm
 
