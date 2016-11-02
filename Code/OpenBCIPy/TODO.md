@@ -40,11 +40,10 @@ Congrats, you're done :D
 Add file paths of the files that need to be deleted here:
 ./Code/OpenBCIPy/src
 $/view
-$/user
-
 
 # Redunant code
 Make note of redunant code here
+$/kivy-app.py: line 33, 71
 
 # Disruptive/unused comments
 Make note of disruptive comments here. This includes comments that are unclear, or commented code that isn't used anymore
