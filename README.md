@@ -1,5 +1,21 @@
 # Wall-EEG
 Mind-controlled bot! :D
+
+## Progress:
+- Studied LORETA source localization algorithm; found Python implementation we can use
+   - R.D. Pascual-Marqui. Review of Methods for Solving the EEG Inverse Problem. International Journal of Bioelectromagnetism 1999, Volume 1, Number 1, pp:75-86.
+      - http://www.uzh.ch/keyinst/NewLORETA/TechnicalDetails/TechnicalDetails.htm
+
+- Studying research paper showing example of controlling robot with motor imagery
+   - Will help us understand ML/statistical analysis techniques to capture motor imagery
+   - Lafleur, K., Cassady, K., Doud, A., Shades, K., Rogin, E., & He, B. (2013). Quadcopter control in three-dimensional space using a noninvasive motor imagery-based brain–computer interface. Journal of Neural Engineering,10(4), 046003. doi:10.1088/1741-2560/10/4/046003
+   - Yuan, H., Perdoni, C., & He, B. (2010). Relationship between speed and EEG activity during imagined and executed hand movements. Journal of Neural Engineering,7(2), 026001. doi:10.1088/1741-2560/7/2/026001
+- Experimented with Emotiv, OpenBCI, and their softwares.
+- Designing C testing tool to ‘feed’ test OpenBCI data to ttyUSB serial port
+   - Goal: virtual OpenBCI for testing purposes
+   - Idea: open USB serial port in a file descriptor; use dup2 to redirect another source of data to file descriptor
+      - http://tldp.org/HOWTO/Serial-Programming-HOWTO/x115.html
+
 ## OpenBCI Signal Acquisition
 The original OpenBCI code uses a system of Yapsy plugins you can make to do what you want with the data it obtains. It used to have a command-line interface through which you could add plugins you wanted to use and run. We will keep the system of plugins to keep things modular (and not to break any of their code), but plugins can only be added and started/stopped by the main function itself.
 
@@ -33,23 +49,3 @@ Code: Contains our code for the mind-controlled bot.
 ----machine-learning: Contains supervised machine learning classifier and a bunch of other code for a workshop done by BCIMontreal
 
 ----plugins: Contains plugins the main function can use. We want to use 'packets-to-csv' for data collection
-
-## How Current Code Works
-Let $ = ./Code/OpenBCIPy
-### $/src/main.py
-* contains main function for the code
-* lines 212-288: setting up the OpenBCI
-    * loads plugin list, hardware setup, etc
-* lines 293-302: sets up view
-    * sets up Kivy app to create a GUI
-* lines 311-319: starts data collection from OpenBCI
-    * done in a separate thread to allow for parallel use of the GUI while the program receives data packets from the OpenBCI
-    * list of objects to pass along are added as an argument
-        * the objects will receive a list of data every time data is received by the computer (at 256 Hz)
-            * functions in the object will parse, process, etc the data
-
-### $/src/biosignals/ECG.py
-* contains an ECG object and functions to signal process data
-
-### $/src/kivy_app.py
-* controls GUI of app
